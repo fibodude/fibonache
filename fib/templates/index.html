@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ВЫЧЕСЛЕНЕЕ ФЕБОНАЧИ ОНЛАЙН</title>
+</head>
+<body style="background-color: black;">
+<div align="center" style="border: 1px solid black;">
+	<h2 id="text" style="width: 70%; font-size: 50px;">ВАШЕ ЧИСЛО ФЕБОНАЧЕ......</h2>
+	<h1 id="cheslo" style="background-color: red; border: 2px solid blue; position: absolute; top:200px;left:0;display: inline-block;">{{ fibo }}</h1>
+</div>
+<div align="center">
+<form action="http://localhost:8000/kek/" method="GET">
+<input type="text" name="fib" placeholder="Vashe febonache..." required>
+<input type="submit" value="VICHISLIT))">
+</form>
+</div>
+</body>
+<script type="text/javascript">
+setInterval(function(){
+	text = document.getElementById("text");
+	if (text.style.color != "blue")
+	{
+		text.style.color = "blue";
+	}
+	else
+	{
+		text.style.color = "green";
+	}
+}, 100)
+var offset = 10;
+var bounce = 30;
+setInterval(function() {
+	cheslo = document.getElementById("cheslo");
+	var top = parseInt(cheslo.style.top);
+	var left = parseInt(cheslo.style.left);
+	if (left > 1000)
+		offset = -10;
+	else if (left < 10)
+		offset = 10;
+	if (bounce > 0)
+		bounce = -30;
+	else
+		bounce = 30;
+	cheslo.style.top = top+bounce+"px";
+	cheslo.style.left = left+offset+"px";
+}, 100)
+</script>
+</html>
